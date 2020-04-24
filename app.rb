@@ -53,8 +53,7 @@ class App < Sinatra::Base
   get '/logout' do
     #clear session hash here
     "Session has now been cleared. session content: #{session.inspect}. Continue on to the '/finish' line!"
-    old_user = session[:username]
-    session[:username] = nil
+    
   end
 
   get '/finish' do
